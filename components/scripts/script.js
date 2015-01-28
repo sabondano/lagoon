@@ -33,9 +33,9 @@ $(function() {
     var windowpos = $(window).scrollTop() + topoffset;
     $('nav li a').removeClass('active');
 
-    if (windowpos > $('#hotelinfo').offset().top) {
+    if (windowpos > $('#events').offset().top) {
       $('nav li a').removeClass('active');
-      $('a[href$="#hotelinfo"]').addClass('active');
+      $('a[href$="#events"]').addClass('active');
     } //windowpos
 
     if (windowpos > $('#rooms').offset().top) {
@@ -43,14 +43,14 @@ $(function() {
       $('a[href$="#rooms"]').addClass('active');
     } //windowpos
 
+    if (windowpos > $('#hotelinfo').offset().top) {
+      $('nav li a').removeClass('active');
+      $('a[href$="#hotelinfo"]').addClass('active');
+    } //windowpos
+
     if (windowpos > $('#dining').offset().top) {
       $('nav li a').removeClass('active');
       $('a[href$="#dining"]').addClass('active');
-    } //windowpos
-
-    if (windowpos > $('#events').offset().top) {
-      $('nav li a').removeClass('active');
-      $('a[href$="#events"]').addClass('active');
     } //windowpos
 
     if (windowpos > $('#attractions').offset().top) {
@@ -100,7 +100,7 @@ $(function() {
     var pin = new ScrollScene({
       triggerElement: '#westminster',
       offset: -topoffset,
-      duration: 500
+      duration: 1250
     }).setPin('#westminster')
       .setTween(roomtween)
       .addTo(controller)
@@ -113,7 +113,7 @@ $(function() {
     var pin = new ScrollScene({
       triggerElement: '#oxford',
       offset: -topoffset,
-      duration: 500
+      duration: 1250
     }).setPin('#oxford')
       .setTween(roomtween)
       .addTo(controller)
@@ -125,7 +125,7 @@ $(function() {
     var pin = new ScrollScene({
       triggerElement: '#victoria',
       offset: -topoffset,
-      duration: 500
+      duration: 1250
     }).setPin('#victoria')
       .setTween(roomtween)
       .addTo(controller)
@@ -137,7 +137,7 @@ $(function() {
     var pin = new ScrollScene({
       triggerElement: '#manchester',
       offset: -topoffset,
-      duration: 500
+      duration: 1250
     }).setPin('#manchester')
       .setTween(roomtween)
       .addTo(controller)
@@ -149,7 +149,7 @@ $(function() {
     var pin = new ScrollScene({
       triggerElement: '#piccadilly',
       offset: -topoffset,
-      duration: 500
+      duration: 1250
     }).setPin('#piccadilly')
       .setTween(roomtween)
       .addTo(controller)
@@ -162,8 +162,20 @@ $(function() {
     var pin = new ScrollScene({
       triggerElement: '#cambridge',
       offset: -topoffset,
-      duration: 500
+      duration: 1250
     }).setPin('#cambridge')
+      .setTween(roomtween)
+      .addTo(controller)
+
+    var roomtween = TweenMax.staggerFromTo(
+      "#donsancho .content",
+      1, roomOrigin, roomDest);
+
+    var pin = new ScrollScene({
+      triggerElement: '#donsancho',
+      offset: -topoffset,
+      duration: 1250
+    }).setPin('#donsancho')
       .setTween(roomtween)
       .addTo(controller)
 

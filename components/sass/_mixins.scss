@@ -28,3 +28,9 @@
     clear: both;
   } //after
 } //clearfix
+
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+} //center-block

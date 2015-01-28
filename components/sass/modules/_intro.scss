@@ -9,16 +9,29 @@ header {
     .hgroup {
       padding: 100px 0;
 
+      #logo {
+        @include center-block;
+        @include breakpoint($tiny) {
+          display: none;
+        }
+        @include breakpoint($narrow) {
+          display: block;
+        } //breakpoint
+      }
+
       h1 {
+        font: $logoFont;
         color: $light;
         font-size: 5em;
         font-weight: $heavy;
-        line-height: .8em;
+        line-height: 1.05em;
         @include text-shadow($dark 0 0 20px);
         text-align: center;
       } //h1
 
       h2 {
+        font: $logoLevelTwoFont;
+        letter-spacing: 0.3em;
         display: block;
         color: $light;
         width: 60%;

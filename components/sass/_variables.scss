@@ -1,14 +1,15 @@
-@import url(http://fonts.googleapis.com/css?family=Exo+2:400,200,600,800);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
 
 @include border-box-sizing; //uses border box sizing like the old IE
 
 $susy: (
   columns: 12,
-  container: 60em,
+  container: 62em,
   gutters: 1/4,
   gutter-position: inside
 );
 
+$tiny: 310px;
 $narrow: 400px;
 $small: 650px;
 $medium: 960px;
@@ -16,33 +17,44 @@ $wide: 1200px;
 
 
 //Add Color Palette
-$blue       : #063642;
-$green      : #45B29D;
-$yellow     : #EFC94C;
-$orange     : #E27A3F;
-$red        : #DF4848;
-$pink       : #CD0069;
-$purple     : #6C71C4;
-$dark       : #000000;
-$light      : #FFFFFF;
+$blue        : #3B8686;
+$green       : #5DA13E;
+$yellow      : #EFC94C;
+$orange      : #E27A3F;
+$red         : #DF4848;
+$pink        : #CD0069;
+$purple      : #6C71C4;
+$dark        : #000000;
+$light       : #FFFFFF;
+$grey        : #87888A;
+$offWhite    : #F5F9FB;
+$darkGrey    : #594F4F;
+$lightGreen  : #A8DBA8;
+$mediumGreen : #3CA95D;
+$mediumGreen2: #5AA88C;
 
 $backgroundColor    : $light;
 $typeDefault        : $dark;
-$navBackground      : $blue;
+$navBackground      : $mediumGreen2;
 $navForeground      : $light;
-$navHover           : $yellow;
-$navBrandBg         : $red;
+$navHover           : $lightGreen;
+$navBrandBg         : $blue;
 $headersubbg        : $dark;
 
 //Font variables
-$fontfamily       : 'Exo 2', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$fontfamily              : 'Lato', sans-serif;
+$fontfamilyLogo          : Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+$fontfamilyLogoLevelTwo  : "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-$thin     : 200;
+$thin     : 300;
 $normal   : 400;
-$bold     : 600;
-$heavy    : 800;
+$bold     : 700;
+$heavy    : 900;
 
-$headFont   : $thin 1.5em/1.5em $fontfamily;
-$mainFont   : $thin 1em/1.5em $fontfamily;
-$headColor  : lighten($blue, 20);
+$logoFont         : $thin 1.5em/1.5em $fontfamilyLogo;
+$logoLevelTwoFont : 100 1.5em/1.5em $fontfamilyLogoLevelTwo;
+$headFont         : $thin 1.5em/1.5em $fontfamily;
+$mainFont         : $thin 1em/1.5em $fontfamily;
+$headColor        : lighten($blue, 20);
+
 

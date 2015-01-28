@@ -18,5 +18,12 @@
     margin-bottom: 200px;
     background: rgba($light, .8);
     @include border-radius(10px);
+    #mc_embed_signup {
+      label {
+        font-size: 1em;
+        font-weight: 400;
+        padding-bottom: 0px;
+      }
+    }
   }
 }

@@ -1,12 +1,46 @@
 #rooms {
   header {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     @include container(90%);
     @include breakpoint($medium) {
       @include container;
       @include pad(1,1);
     }
+    ul {
+      margin-top: 20px;
+      li {
+        list-style: square;
+        margin-left: 10%;
+        line-height: 115%;
+        margin-bottom: 15px;
+        a {
+          color: $grey;
+          text-decoration: none;
+          &:visited { text-decoration: underline; }
+        } //a
+      } //li
+    } //ul    
   } //header
+
+  #contactusmidpage {
+    text-align: center;
+    margin-top: 60px;
+
+    #mc_embed_signup {
+      @include container(100%);
+      @include center-block;
+    } //#mc_embed_signup
+
+    #mce-EMAIL {
+      @include container(100%);
+      @include center-block;
+      } //#mce-EMAIL
+
+    #mc-embedded-subscribe {
+      @include container(100%);
+      @include center-block;
+      } //#mc-embedded-subscribe
+  } //#contactusmidpage
 
   .room {
     @include container(100%);
@@ -29,6 +63,19 @@
       h1 {
         color: $red;
       } //h1
+
+      a {
+        color: $grey;
+        float: right;
+        font-size: 0.8em;
+        text-align: center;
+        text-decoration: none;
+        &:hover { text-decoration: underline; }
+      } //a
+
+      img {
+        @include border-radius(10px);
+      } //img      
     } //content
   } //room
   #piccadilly { @include backImage('../images/hotel/rooms_piccadilly.jpg');}
@@ -37,6 +84,7 @@
   #oxford {@include backImage('../images/hotel/rooms_oxford.jpg');}
   #victoria {@include backImage('../images/hotel/rooms_victoria.jpg');}
   #manchester {@include backImage('../images/hotel/rooms_manchester.jpg');}
+  #donsancho {@include backImage('../images/hotel/rooms_donsancho.jpg');}
 } //rooms
 
 

@@ -54,7 +54,7 @@ header #nav {
 
           &:hover {
             background-color: $navHover;
-            color: $blue;
+            color: $light;
           } //hover
 
           @include breakpoint(0 $small) {
@@ -73,7 +73,7 @@ header #nav {
           } //breakpoint
 
           &.active {
-            background-color: $red;
+            background-color: $blue;
             color: $light;
           }
         } //a

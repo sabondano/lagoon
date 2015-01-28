@@ -1,5 +1,5 @@
 #hotelinfo {
-  @include background-image(linear-gradient(top, darken($purple, 20), $green));
+  @include background-image(linear-gradient(top, darken($mediumGreen2, 0), $mediumGreen));
   color: $light;
 
   #{headings()} {
@@ -26,7 +26,7 @@
       } //breakpoint
 
       h2 {
-        color: lighten($purple,20);
+        color: darken($blue, 10);
         font-size: 1.3em;
         line-height: 110%;
         padding: 10px 0;
@@ -35,6 +35,10 @@
       p {
         font-size: 1em;
         line-height: 130%;
+        &:last-child {
+          margin-top: 20px;
+          font-size: 0.75em;
+        } //last child
       } //p
 
       ul {
